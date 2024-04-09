@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inventory Management</h1>
+        
+        <!-- Current Inventory -->
+        <div class="inventory">
+            <h2>Current Inventory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Expiry Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Inventory data will be populated dynamically here -->
+                    <tr>
+                        <td>Product 1</td>
+                        <td>10</td>
+                        <td>January 2025</td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>20</td>
+                        <td>January 2025</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Inventory Actions -->
+        <div class="actions">
+            <h2>Inventory Actions</h2>
+            
+            <!-- Form for adding a new product -->
+            <form action="addProduct.java" method="post">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" name="productName">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity">
+                </div>
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate">
+                </div>
+                <input type="submit" value="Add Product">
+            </form>
+            
+            <!-- Form for updating an existing product -->
+            <form action="updateProduct" method="post">
+                <div class="form-group">
+                    <label for="updateProductName">Product Name:</label>
+                    <input type="text" id="updateProductName" name="updateProductName">
+                </div>
+                <div class="form-group">
+                    <label for="newQuantity">New Quantity:</label>
+                    <input type="number" id="newQuantity" name="newQuantity">
+                </div>
+                <div class="form-group">
+                    <label for="newExpiryDate">New Expiry Date:</label>
+                    <input type="text" id="newExpiryDate" name="newExpiryDate">
+                </div>
+                <input type="submit" value="Update Product">
+            </form>
+            
+            <!-- Form for deleting a product -->
+            <form action="deleteProduct" method="post">
+                <div class="form-group">
+                    <label for="deleteProductName">Product Name:</label>
+                    <input type="text" id="deleteProductName" name="deleteProductName">
+                </div>
+                <input type="submit" value="Delete Product">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
